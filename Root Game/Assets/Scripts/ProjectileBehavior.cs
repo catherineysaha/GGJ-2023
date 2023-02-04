@@ -7,9 +7,13 @@ public class ProjectileBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 lastVelocity;
 
+    public GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
+        gm.projectiles--;
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, 5);
     }
@@ -25,5 +29,9 @@ public class ProjectileBehavior : MonoBehaviour
         Vector3 direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
         rb.velocity = direction * Mathf.Max(speed, 0f);
+    }
+
+    private void OnDestroy() {
+        gm.projectiles++;
     }
 }

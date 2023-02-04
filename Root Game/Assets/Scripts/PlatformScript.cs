@@ -17,9 +17,11 @@ public class PlatformScript : MonoBehaviour
     private Vector3 movement;
 
     public bool frozen = false;
+    public GameManager gm;
 
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         body = GetComponentInParent<Transform>();
         rigid = GetComponentInParent<Rigidbody2D>();
         startPos = body.position;
@@ -31,6 +33,11 @@ public class PlatformScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Fire2") && frozen) {
+            frozen = false;
+            gm.projectiles++;
+        }
+
         if (!frozen) {
             if (body.position.x < startPos.x - leftRange) {
                 movement += new Vector3(speed.x, 0, 0);
@@ -52,6 +59,7 @@ public class PlatformScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Projectile")) {
             Destroy(collision.gameObject);
+            gm.projectiles--;
             frozen = true;
         }
     }
