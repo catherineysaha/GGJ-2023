@@ -21,7 +21,6 @@ public class ProjectileBehavior : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("here");
         float speed = lastVelocity.magnitude;
         Vector3 direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
