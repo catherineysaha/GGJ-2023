@@ -10,7 +10,10 @@ public class ShootProjectile : MonoBehaviour {
     private float t;
     private bool onCoolDown = false;
 
+    public GameManager gm;
+
     private void Start() {
+        gm = FindObjectOfType<GameManager>();
         t = 0;
     }
 
@@ -23,7 +26,7 @@ public class ShootProjectile : MonoBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && !onCoolDown) {
+        if (Input.GetButtonDown("Fire1") && !onCoolDown && gm.projectiles > 0) {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var mouseDir = mousePos - gameObject.transform.position;
             mouseDir.z = 0.0f;
