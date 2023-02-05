@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void Respawn() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void NextLevel() {
         if (SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCount) {
             GameWon();
