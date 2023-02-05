@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
     private bool isTouchingGround;
     public Vector3 respawnPoint;
     private bool hasLanded = true;
-    //public LevelManager gameLevelManager;
+    
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start() {
+        gm = FindObjectOfType<GameManager>();
         rigidBody = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
         //gameLevelManager = FindObjectOfType<LevelManager>();
@@ -33,10 +35,8 @@ public class PlayerController : MonoBehaviour {
         movement = Input.GetAxis("Horizontal");
         if (movement > 0f) {
             rigidBody.velocity = new Vector2(movement * speed, rigidBody.velocity.y);
-            //transform.localScale = new Vector2(-.7f, transform.localScale.y);
         } else if (movement < 0f) {
             rigidBody.velocity = new Vector2(movement * speed, rigidBody.velocity.y);
-            //transform.localScale = new Vector2(.7f, transform.localScale.y);
         } else {
             rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
@@ -56,11 +56,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "FallDetector") {
-            //gameLevelManager.Respawn();
-        }
-        if (other.tag == "Checkpoint") {
-            respawnPoint = other.transform.position;
+        if (other.gameObject.CompareTag("FallDetector")) {
+            gm.Respawn();
         }
     }
 }
