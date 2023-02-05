@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 1558230017}
   - component: {fileID: 1558230016}
   - component: {fileID: 1558230015}
+  - component: {fileID: 1558230020}
   m_Layer: 0
   m_Name: Moving Platform
   m_TagString: Untagged
@@ -520,7 +521,7 @@ MonoBehaviour:
   rigid: {fileID: 0}
   topRange: 0
   bottomRange: 0
-  leftRange: 0
+  leftRange: 2
   rightRange: 5
   speed: {x: 0.05, y: 0}
   frozen: 0
@@ -540,16 +541,16 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.19000001, y: 0.7033333, z: 0.22666667, w: 1.32}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.6000001, y: 3.6000001}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &1558230017
 Rigidbody2D:
@@ -613,7 +614,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 776d0efb6736e454280c62f90cf1262f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -639,6 +640,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!893571522 &1558230020
+CustomCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558230014}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_CustomShapes:
+    m_Shapes: []
+    m_Vertices: []
 --- !u!1 &1607256903
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6fb41f6bf4fa74b9dc1d5add75d310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectiles: 1
+  projectiles: 10
 --- !u!4 &1607256905
 Transform:
   m_ObjectHideFlags: 0
@@ -1394,6 +1412,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1448519893914121986, guid: 3fc82327224b9cd4ebc799ce16f31e7e, type: 3}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1448519893914121987, guid: 3fc82327224b9cd4ebc799ce16f31e7e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1442,6 +1464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1448519893914121989, guid: 3fc82327224b9cd4ebc799ce16f31e7e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b25898296d8ef6c4fbf2ae93316519f0, type: 3}
     - target: {fileID: 1448519893914121991, guid: 3fc82327224b9cd4ebc799ce16f31e7e, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
