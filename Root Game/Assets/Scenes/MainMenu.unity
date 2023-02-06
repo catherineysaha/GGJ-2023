@@ -939,7 +939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &841072438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1282,7 +1282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1292740967
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2328,7 +2328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: 44}
+  m_AnchoredPosition: {x: -65, y: 66}
   m_SizeDelta: {x: 506.1368, y: 95.1356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866457052
@@ -2351,19 +2351,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Justin Lewis - Design & Programming
+  m_text: 'Ivan Berlin - Music & Music
 
-    Rudra Sett - Art & Programming
+    Riley Larkin - Sound Design
 
-    Ivan
-    Berlin - Music & Music Implementation w/ Wwise
-
-    Patrick Rose - Level Design
-    & Implementation
+    Justin
+    Lewis - Design & Programming
 
     Noelle Marcel - Programming
 
-    Catherine Saha - Art'
+    Patrick Rose
+    - Level Design & Implementation
+
+    Catherine Saha - Art
+
+    Rudra Sett - Art
+    & Programming Implementation w/ Wwise'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2426,7 +2429,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -139.8597, y: 0, z: -279.71933, w: 0}
+  m_margin: {x: -139.8597, y: 0, z: -350.72507, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
