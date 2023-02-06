@@ -3092,10 +3092,10 @@ MonoBehaviour:
   body: {fileID: 0}
   rigid: {fileID: 0}
   topRange: 0
-  bottomRange: 0
+  bottomRange: -2
   leftRange: 2
   rightRange: 5
-  speed: {x: 0.05, y: 0}
+  speed: {x: 0.01, y: 0.01}
   frozen: 0
   gm: {fileID: 0}
 --- !u!61 &1558230016
